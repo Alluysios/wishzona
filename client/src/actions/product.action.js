@@ -61,11 +61,9 @@ export const getProduct = slug => async dispatch => {
 }
 
 export const writeReview = (formData, id) => async dispatch => {
-    console.log(formData);
     const config = { 'Content': 'application/json' }
     try {
         const response = await axios.post(`/api/v1/products/${id}/reviews`, formData, config);
-        console.log(response.data);
         dispatch({ type: WRITE_REVIEW, payload: response.data });
     } catch (err) {
         const errors = err.response.data.errors;

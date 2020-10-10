@@ -31,7 +31,6 @@ router.put('/updateProfile',
     resizeUploadedImages,
     async(req, res) => {
     if(!req.body.image) req.body.image = 'default.jpg';
-        console.log(req.body);
     // check if user updating for password
     if(req.body.password) res.status(401).json({ errors: { type: 'profile', err: [{ msg: 'Please go to update password. This is only for updating profile. '}] }});
     const checkEmail = await User.findOne({ email: req.body.email });
