@@ -12,8 +12,8 @@ const Products = ({ getProducts, products: { products }, category }) => {
     const [page, setPage] = useState(0);
     const [limit, setLimit] = useState(10);
     useEffect(() => {
-        getProducts(category, 999, page);
-    }, [getProducts, category, page]);
+        getProducts(category, 999);
+    }, [getProducts, category]);
 
 
     const changePage = (index) => {
