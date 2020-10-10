@@ -42,7 +42,6 @@ export default (state = initialState, actions) => {
             }
         case REMOVE_CART:
             let productQuantity = state.products.filter(prod => prod.id === payload.id)[0].quantity;
-            console.log(payload.price * productQuantity)
             return {
                 ...state,
                 products: [...state.products.filter(prod => prod.id !== payload.id)],
