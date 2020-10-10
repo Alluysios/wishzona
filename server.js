@@ -1,3 +1,9 @@
+process.on('uncaughtException', err => {
+    console.log('UNHANDLER EXCEPTION SHUTDOWN...');
+    console.log(err.name, err.message);
+    process.exit(1);
+})
+
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
@@ -13,12 +19,19 @@ mongoose.connect(db, {
     useFindAndModify: false
 }).then(() => {
     console.log('DATABASE CONNECTED');
-}).catch(() => {
-    console.log('Something went wrong with the database');
 })
 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
     console.log(`App running at port ${PORT}`);
-})
+});
+
+// SERVER ERROR EX: NOT CONNECTED TO DATABASE
+process.on('unhandledRejection', err => {
+    console.log('UNHANDLER REJECTION SHUTDOWN...');
+    console.log(err.name, err.message);
+    server.close(() => {
+        process.exit(1);
+    })
+});

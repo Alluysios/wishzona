@@ -37,6 +37,7 @@ app.use(
     hpp({
         whitelist: [
             'price',
+            'category',
             'name'
         ]
     })
