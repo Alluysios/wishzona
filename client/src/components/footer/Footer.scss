@@ -1,0 +1,35 @@
+.footer {
+    background-color: #333333;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    display: flex;
+    padding: 5rem 20rem;
+    justify-content: space-between;
+
+    & a {
+        color: #FFFFFF;
+        display: block;
+    }
+
+    &__hireme {
+        & > * {
+            padding: 6px 0;
+        }
+    }
+
+    &__menu {
+        & > * {
+            padding: 3px 0;
+        }
+    }
+
+    &__socialmedia {
+
+        & img {
+            margin-right: 1.5rem;
+            margin-top: 1.5rem;
+            width: 45px;
+            height: 45px;
+        }
+    }
+}

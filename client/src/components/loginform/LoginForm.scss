@@ -1,0 +1,16 @@
+.form {
+    padding: 5rem 0 15rem 0;
+
+    &-sub {
+        font-size: 1.3rem;
+        color: rgb(86, 86, 255);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    &-heading {
+        font-size: 3.5rem;
+    }
+}

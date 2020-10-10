@@ -1,0 +1,49 @@
+.form {
+    &-group {
+        margin: 1rem 0;
+
+        & input[type=text], 
+        input[type=email], 
+        input[type=password],
+        textarea {
+            width: 100%;
+        }
+
+        & input[type=file] {
+           padding: 0;
+        }
+    }
+
+    &-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+
+        &-container {
+            width: 20rem;
+            height: 20rem;
+            display: block;
+            margin: 2rem 0;
+        }
+    }
+
+    &-group:first-child {
+        margin-top: 0;
+    }
+
+    &-label {
+        font-size: 1.7rem;
+        display: block;
+        color: #000000;
+        margin-bottom: 6px;
+    }
+    
+    &-input {
+        border: 1px solid #333333;
+        outline: none;
+        padding: 1.2rem;
+        border-radius: 3px;
+    }
+}

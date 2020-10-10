@@ -1,0 +1,123 @@
+.card {
+    text-align: center;
+    flex: 0 0 19%;
+    margin: 0 0.5%;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    cursor: pointer;
+
+    &__img {
+        height: 18rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: all .3s;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    
+    &__icons {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 10px;
+
+        & > *:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__heart-icon {
+        transform: translateY(30px);
+        transition: all .3s;
+    }
+
+    &:hover &__heart-icon {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    &:hover &__cart-icon {
+        transform: translateY(15px);
+        opacity: 1;
+    }
+
+    &__cart-icon {
+        transform: translateY(-30px);
+        opacity: 0;
+        transition: all .3s;
+        z-index: 9999;
+
+        &::before {
+            content: 'add to cart';
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            left: 0;
+            transform: translateX(-50%);
+            background: #000;
+            color: #fff;
+            border-radius: 6px;
+            width: 80px;
+            transition: all .3s;
+            z-index: 999999;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -7px;
+            top: -100%;
+            border-bottom-left-radius: 30%;
+            border-bottom-right-radius: 30%;
+            padding: 0 6px;
+            padding-bottom: 25px;
+            width: 100%;
+            height: 100%;
+            z-index: -99;
+            background: #FFFFFF;
+            transition: all .3s;
+        }
+
+        &:hover::before {
+            opacity: 1;
+            left: -190%;
+        }
+    }
+
+    &:hover &__cart-icon::after {
+        top: -20px;
+    }
+
+    &__heart-icon {
+        opacity: 0;
+    }
+
+    &__info {
+        padding: 1.5rem 0 1rem 0;
+        color: #333;
+        font-weight: 700;
+        font-size: 1.8rem;
+    }
+
+    &__name {
+    }
+
+    &__price {
+        
+    }
+
+    &__rating {
+        
+    }
+
+}
