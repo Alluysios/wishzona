@@ -1,0 +1,15 @@
+export const LOAD_USER = 'LOAD_USER';
+export const REGISTER = 'REGISTER';
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+export const GET_ALL_PRODUCTS = 'GET_ALL_PRODUCTS';
+export const GET_PRODUCT = 'GET_PRODUCT';
+export const ADD_CART = 'ADD_CART';
+export const REMOVE_CART = 'REMOVE_CART';
+export const INCREMENT_QUANTITY = 'INCREMENT_QUANTITY';
+export const DECREMENT_QUANTITY = 'DECREMENT_QUANTITY';
+export const WRITE_REVIEW = 'WRITE_REVIEW';
+export const DELETE_REVIEW = 'DELETE_REVIEW';
+export const DISPLAY_CART = 'DISPLAY_CART';
+export const POST_ERROR = 'POST_ERROR';
+export const AUTH_ERROR = 'AUTH_ERROR';

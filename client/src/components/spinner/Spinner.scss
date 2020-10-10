@@ -1,0 +1,18 @@
+.spinner {
+    margin: 5rem 0;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    &__gif {
+        width: 10rem;
+        border-radius: 50%;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+}

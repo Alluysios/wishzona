@@ -1,0 +1,23 @@
+.review {
+    flex: 0 0 23%;
+    margin: 1rem 1%;
+    text-align: center;
+
+    & > * {
+        padding: 6px 0;
+    }
+
+    &__user {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    &__content {
+        font-size: 1.5rem;
+    }
+
+    &__date {
+        font-size: 1.3rem;
+        color: #919191;
+    }
+}

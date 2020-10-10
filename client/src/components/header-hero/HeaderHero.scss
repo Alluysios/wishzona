@@ -1,0 +1,26 @@
+.hero {
+    display: flex;
+
+    &__content {
+        height: 100%;
+        align-self: center;
+        padding-right: 5rem;
+
+        &-title {
+            font-size: 5rem;
+            margin: 1.8rem 0;
+            font-weight: 500;
+        }
+        &-description {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__background {
+        height: 50rem;
+        flex: 1 0 50%;
+        background-image: url('./headerbg.jpg');
+        background-size: cover;
+        background-position: bottom;
+    }
+}

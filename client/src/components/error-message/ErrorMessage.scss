@@ -1,0 +1,14 @@
+.error {
+    background-color: #f8d7da;
+    border-color:#f5c6cb;
+    color: #721c24;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+
+    &__msg {
+        font-size: 1.6rem;
+    }
+}

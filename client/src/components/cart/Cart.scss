@@ -1,0 +1,69 @@
+.cart {
+    padding: 5rem 0;
+    &__heading {
+        font-size: 4rem;
+    }
+    &__list {
+        margin-top: 2rem;
+
+        &-item {
+            background-color: #f0f0f0;
+            padding: 6px 4rem;
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-name {
+                font-size: 2.5rem;
+                flex: 1 0 50%;
+            }
+
+            &-quantity {
+                font-size: 2rem;
+                flex: 1 0 45%;
+
+                &-text {
+                    font-size: 3rem;
+                    vertical-align: 12px;
+                    margin: 0 3rem;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        color: #000;
+        cursor: pointer;
+    }
+
+    &__checkout {
+        font-size: 1.7rem;
+        margin-top: 4rem;
+        & .subtotal {
+
+        }
+
+        & .gst {
+            padding-left: 3rem;
+            margin-bottom: 4px;
+        }
+
+        & .total {
+            padding-top: 5px;
+            padding-left: 2.5rem;
+            border-top: 1px solid #000;
+        }
+
+        & .price {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+
+        & .warning {
+            color: #ff6700;
+            font-weight: 500;
+        }
+    }
+}

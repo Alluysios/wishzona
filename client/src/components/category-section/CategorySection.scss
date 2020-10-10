@@ -1,0 +1,9 @@
+.category-section {
+    text-align: center;
+    &__title {
+        text-align: left;
+        font-size: 3rem;
+        margin-top: 5rem;
+        border-bottom: 1px solid #000;
+    }
+}
