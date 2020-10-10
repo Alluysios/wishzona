@@ -69,8 +69,8 @@ a.ml-md {
   text-align: center;
   justify-content: center;
   font-size: 1.5rem;
+}
 
-  &__info {
-    font-size: 1.8rem;
-  }
+.center__info {
+  font-size: 1.8rem;
 }
