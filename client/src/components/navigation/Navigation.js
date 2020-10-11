@@ -34,7 +34,9 @@ const Navigation = ({ auth: { isAuthenticated, loaded }, logout, cart, displayCa
                 }
                 
             </ul>
-
+            <div className='nav__shopnow'>
+                <Link to='/shop' className='nav__product-categories-item nav__product-shop'>Shop Now!</Link>
+            </div>
             <ul className='nav__product-categories'>
                 <li className='nav__product-categories-item' >
                     <Link to={`/shop/clothing`}>

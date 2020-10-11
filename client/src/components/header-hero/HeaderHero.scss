@@ -1,15 +1,45 @@
 .hero {
     display: flex;
+    position: relative;
 
     &__content {
         height: 100%;
         align-self: center;
         padding-right: 5rem;
 
+        @media (max-width: 916px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5rem;
+            height: 0;
+        }
+
+        @media (max-width: 556px) {
+            position: static;
+            top: 0;
+            left: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        @media (max-width: 375px) {
+            padding-right: 0;
+            text-align: center;
+        }
+
         &-title {
             font-size: 5rem;
             margin: 1.8rem 0;
             font-weight: 500;
+
+            @media (max-width: 1360px) {
+                font-size: 4rem;
+            }
+
+            @media (max-width: 916px) {
+                font-size: 3rem;
+            }
         }
         &-description {
             font-size: 1.5rem;
@@ -22,5 +52,11 @@
         background-image: url('./headerbg.jpg');
         background-size: cover;
         background-position: bottom;
+
+        @media (max-width: 556px) {
+            background: none;
+            display: none;
+            height: 0;
+        }
     }
 }

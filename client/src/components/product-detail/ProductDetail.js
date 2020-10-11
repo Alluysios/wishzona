@@ -40,7 +40,6 @@ const ProductDetail = ({ slug, getProduct, product: { product }, addCart }) => {
                 
                 <div className='product__img' 
                     style={{
-                        flex: '1 0 40%',
                         backgroundImage: `url(/uploads/products/${product.imageCover})`,
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover',

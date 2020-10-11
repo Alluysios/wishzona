@@ -5,5 +5,9 @@
         font-size: 3rem;
         margin-top: 5rem;
         border-bottom: 1px solid #000;
+
+        @media (max-width: 375px) {
+            margin-top: 2rem;
+        }
     }
 }

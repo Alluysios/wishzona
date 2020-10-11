@@ -6,6 +6,18 @@
     padding: 5rem 20rem;
     justify-content: space-between;
 
+    @media (max-width: 996px) {
+        padding: 0 1rem;
+        padding-bottom: 3rem;
+        flex-wrap: wrap;
+        text-align: center;
+
+        & > * {
+            flex: 1 0 100%;
+            margin-top: 2rem;
+        }
+    }
+
     & a {
         color: #FFFFFF;
         display: block;
@@ -24,12 +36,16 @@
     }
 
     &__socialmedia {
-
         & img {
             margin-right: 1.5rem;
             margin-top: 1.5rem;
             width: 45px;
             height: 45px;
+            
+            @media (max-width: 375px) {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 }

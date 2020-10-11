@@ -3,20 +3,43 @@
     flex: 0 0 19%;
     margin: 0 0.5%;
     margin-top: 3rem;
-    font-size: 1.5rem;
     position: relative;
     top: 0;
     left: 0;
     overflow: hidden;
     cursor: pointer;
 
+    @media (max-width: 1360px) {
+        margin-top: 1rem;
+        margin-left: 0;
+        flex: 1 0 31%;
+    }
+
+    @media (max-width: 760px) {
+        flex: 1 0 48%;
+    }
+
+    @media (max-width: 375px) {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+
     &__img {
-        height: 18rem;
+        height: 20rem;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         transition: all .3s;
-        
+
+        @media (max-width: 760px) {
+            height: 30rem;
+        }
+
+        @media (max-width: 496px) {
+            height: 20rem;
+        }
+
         &:hover {
             transform: scale(1.05);
         }
@@ -107,6 +130,11 @@
         color: #333;
         font-weight: 700;
         font-size: 1.8rem;
+
+        @media (max-width: 375px) {
+            font-size: 1.6rem;
+            padding: 6px 0;
+        }
     }
 
     &__name {
