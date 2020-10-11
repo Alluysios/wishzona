@@ -9,11 +9,12 @@ import FormButton from '../formbutton/FormButton';
 
 // Actions
 import { login } from '../../actions/auth.actions';
-import ErrorMessage from '../error-message/ErrorMessage';
+import AlertMessage from '../alert-message/AlertMessage';
 
 const LoginForm = ({ login, history, auth: { errors } }) => {
     const dispatch = useDispatch();
     useEffect(() => {
+        dispatch({ type: 'CLEAR_ERROR_MESSAGES' })
         return () => {
             dispatch({ type: 'CLEAR_ERROR_MESSAGES' })
         }
@@ -37,7 +38,7 @@ const LoginForm = ({ login, history, auth: { errors } }) => {
         <form className='form form--login' onSubmit={handleSubmit}>
             <h2 className='form-heading'>Login</h2>
             <Link to='/register' className='form-sub'>Don't have an account? register now!</Link>
-            <ErrorMessage errors={errors} />
+            <AlertMessage errors={errors} />
             <FormInput 
                 type='email'
                 label='Email'

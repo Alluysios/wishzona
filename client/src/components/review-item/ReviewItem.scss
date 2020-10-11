@@ -3,6 +3,14 @@
     margin: 1rem 1%;
     text-align: center;
 
+    @media (max-width: 796px) {
+        flex: 1 0 31%;
+    }
+
+    @media (max-width: 375px) {
+        flex: 1 0 100%;
+    }
+
     & > * {
         padding: 6px 0;
     }

@@ -16,7 +16,7 @@ const Categories = ({ getProductsByPrice, category }) => {
                     </span>
                 </li>
                 <li className='categories__lists-item'>
-                    <span onClick={() => getProductsByPrice('+price', category)}>
+                    <span onClick={() => getProductsByPrice('-price', category)}>
                         Highest to Lowest
                     </span>
                 </li>

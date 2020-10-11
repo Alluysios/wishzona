@@ -101,3 +101,12 @@ a.ml-md {
 .center__info {
   font-size: 1.8rem;
 }
+
+.back-button { 
+  display: inline-block;
+  font-size: 1.7rem;
+  text-align: center;
+  color: #333333;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}

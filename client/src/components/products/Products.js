@@ -11,10 +11,11 @@ import { getProducts } from '../../actions/product.action';
 const Products = ({ getProducts, products: { products }, category }) => {
     const [page, setPage] = useState(0);
     const [limit, setLimit] = useState(10);
-    useEffect(() => {
-        getProducts(category, 999);
-    }, [getProducts, category]);
 
+    useEffect(() => {
+        getProducts(category, 999)
+        if(category) changePage(1);
+    }, [getProducts, category]);
 
     const changePage = (index) => {
         if(index === 1) {
@@ -34,7 +35,7 @@ const Products = ({ getProducts, products: { products }, category }) => {
     return (
         <div className='products'>
             <div className="products__categories">
-                <Categories category={category} />
+                <Categories category={category} products={products} />
             </div>
             <div className="products__lists">
                 <ProductList products={products.slice(page, limit)} title='CHECK OUR BEST OFFER' />

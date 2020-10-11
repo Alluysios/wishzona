@@ -4,8 +4,7 @@ import {
     GET_ALL_PRODUCTS,
     GET_PRODUCT,
     WRITE_REVIEW,
-    POST_ERROR,
-    DELETE_REVIEW
+    POST_ERROR
 } from './types';
 
 export const getProducts = (category, limit = 100, page = 1) => async dispatch => {

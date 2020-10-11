@@ -8,11 +8,12 @@ import FormInput from '../forminput/FormInput';
 import FormButton from '../formbutton/FormButton';
 
 import { register } from '../../actions/auth.actions';
-import ErrorMessage from '../error-message/ErrorMessage';
+import AlertMessage from '../alert-message/AlertMessage';
 
 const RegisterForm = ({ register, history, auth: { errors } }) => {
     const dispatch = useDispatch();
     useEffect(() => {
+        dispatch({ type: 'CLEAR_ERROR_MESSAGES' })
         return () => {
             dispatch({ type: 'CLEAR_ERROR_MESSAGES' })
         }
@@ -39,7 +40,7 @@ const RegisterForm = ({ register, history, auth: { errors } }) => {
         <form className='form form--register' onSubmit={handleSubmit}>
             <h2 className='form-heading'>Register</h2>
             <Link to='/login' className='form-sub'>Already have an account? login now!</Link>
-            <ErrorMessage errors={errors} />
+            <AlertMessage errors={errors} />
             <FormInput 
                 type='text'
                 label='Firstname'

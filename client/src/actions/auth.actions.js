@@ -58,7 +58,7 @@ export const logout = () => async dispatch => {
     try {
         await axios.get('/api/v1/auth/signOut', config);
         Cookies.remove('token');
-        dispatch({ type: LOGOUT })
+        dispatch({ type: LOGOUT });
     } catch (err) {
         const errors = err.response.data.errors;
         dispatch({ type: AUTH_ERROR, payload: errors });

@@ -1,7 +1,7 @@
 .product {
     display: flex;
     flex-wrap: wrap;
-    padding: 5rem 0;
+    padding-bottom: 5rem;
 
     & hr {
         margin: 2rem 0;
@@ -89,6 +89,16 @@
     }
 
     &__reviews {
+
+        &-text {
+            font-size: 1.8rem;
+            font-weight: 500;
+            border-radius: 6px;
+            padding: 2rem 1.5rem;
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
 
         &-noreview {
             display: block;

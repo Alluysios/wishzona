@@ -3,9 +3,18 @@ import Moment from 'react-moment';
 import './ReviewItem.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const ReviewItem = ({ review }) => {
+
+    const renderStarRating = (review) => {
+        let stars = [];
+        for (let i = 0; i < review.rating; i++) {
+            stars.push(<FontAwesomeIcon key={i} icon={faStar} size='2x' color='#FF9529' />)
+        }
+        return stars;
+    }
+
     return (
         <React.Fragment>
             {
@@ -13,11 +22,9 @@ const ReviewItem = ({ review }) => {
                     <div className='review'>
                         <p className='review__user'>{review.user.firstname}</p>
                         <span className="review__rating">
-                            <FontAwesomeIcon icon={faStar} size='2x' color='#FF9529' />
-                            <FontAwesomeIcon icon={faStar} size='2x' color='#FF9529' />
-                            <FontAwesomeIcon icon={faStar} size='2x' color='#FF9529' />
-                            <FontAwesomeIcon icon={faStar} size='2x' color='#FF9529' />
-                            <FontAwesomeIcon icon={faStarHalfAlt} size='2x' color='#FF9529' />
+                            {
+                                renderStarRating(review)
+                            }
                         </span>
                         <p className='review__content'>{review.review}</p>
                         <p className="review__date"><Moment format="YYYY/MM/DD">{review.createdAt}</Moment></p>

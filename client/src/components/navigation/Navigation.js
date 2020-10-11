@@ -24,7 +24,7 @@ const Navigation = ({ auth: { isAuthenticated, loaded }, logout, cart, displayCa
                     isAuthenticated && loaded ?
                     <React.Fragment>
                         <Link to='/account' className='nav__list-item'>Account</Link>
-                        <Link to='#!' onClick={() => logout()} className='nav__list-item'>Logout</Link>
+                        <Link to='/' onClick={() => logout()} className='nav__list-item'>Logout</Link>
                     </React.Fragment>
                     :
                     <React.Fragment>

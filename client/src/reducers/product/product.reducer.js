@@ -2,7 +2,6 @@ import {
     GET_ALL_PRODUCTS,
     GET_PRODUCT,
     WRITE_REVIEW,
-    DELETE_REVIEW,
     POST_ERROR
 } from '../../actions/types';
 

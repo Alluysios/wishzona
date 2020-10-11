@@ -17,12 +17,6 @@ const ReviewList = ({ reviews }) => {
                         </React.Fragment>    
                     )
                 }
-                <ReviewItem />
-                <ReviewItem />
-                <ReviewItem />
-                <ReviewItem />
-                <ReviewItem />
-                <ReviewItem />
             </div>
             
         </React.Fragment>

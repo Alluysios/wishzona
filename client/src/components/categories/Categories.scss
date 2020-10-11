@@ -11,9 +11,12 @@
         &-item {
             display: block;
             padding: 5px 0;
-            &:hover {
-                text-decoration: underline;
+
+            & > * {
                 cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

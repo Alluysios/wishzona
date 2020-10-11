@@ -6,7 +6,7 @@ const reviewSchema = new mongoose.Schema({
         type: Number,
         min: 1,
         max: 5,
-        default: 0
+        default: 5
     },
     createdAt: {
         type: Date,
@@ -28,6 +28,8 @@ const reviewSchema = new mongoose.Schema({
     toObject: { virtuals: true }
 });
 
+reviewSchema.index({ product: 1, user: 1 }, { unique: true });
+
 reviewSchema.pre(/^find/, function(next) {
     this.populate({
         path: 'user',
@@ -35,7 +37,7 @@ reviewSchema.pre(/^find/, function(next) {
     })
 
     next();
-})
+});
 
 const Review = mongoose.model('Review', reviewSchema);
 
