@@ -19,7 +19,7 @@ const StripeCheckOutButton = ({ price }) => {
     return (
         <StripeCheckout 
             label='Pay Now'
-            name='Arriba Fashion & Beauty'
+            name='Wishzona'
             billingAddress
             shippingAddress
             image='https://eskipaper.com/images/fashion-wallpaper-12.jpg'

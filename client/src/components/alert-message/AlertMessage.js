@@ -6,7 +6,7 @@ const AlertMessage = ({ errors, alertType }) => {
     return (
         <React.Fragment >
             {
-                errors && errors.map(error => <div className='alert'><p className={`alert--${alertType}`}>{error.msg}</p></div>)
+                errors && errors.map((error, i) => <div key={i} className='alert'><p className={`alert--${alertType}`}>{error.msg}</p></div>)
             }
         </React.Fragment>
     )

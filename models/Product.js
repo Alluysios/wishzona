@@ -46,6 +46,7 @@ const productSchema = new mongoose.Schema({
     toObject: { virtuals: true }
 });
 
+productSchema.index({ ratingAverage: -1 });
 productSchema.index({ price: 1 });
 productSchema.index({ slug: 1 });
 

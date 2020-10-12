@@ -31,6 +31,7 @@ const ProductDetail = ({ slug, getProduct, product: { product }, auth: { user },
     }
 
     if(!product) return <Spinner />
+
     return (
         <React.Fragment>
             <Link to='/' className='back-button'> &larr; Go Back </Link>
@@ -79,7 +80,7 @@ const ProductDetail = ({ slug, getProduct, product: { product }, auth: { user },
 
             <div className="product__reviews">
                 {
-                    product.review.find(rev => rev.user._id === user._id) ? <p className="product__reviews-text">Thanks for the feedback.</p> : <ReviewForm id={product._id} />
+                    user && product.review.find(rev => rev.user._id === user._id) ? <p className="product__reviews-text">Thanks for the feedback.</p> : <ReviewForm id={product._id} />
                 }
                 {
                     product.review.length === 0 ? <span className='product__reviews-noreview'>No Review for this product yet.</span> : <ReviewList reviews={product.review} />

@@ -3,7 +3,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 20rem 0 20rem;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 500;
     box-shadow: 0 12px 3rem -3rem rgba(0, 0, 0, 0.4);
     @media (max-width: 960px) {
@@ -119,6 +119,7 @@
             &-dropdown {
                 cursor: pointer;
                 padding-right: 6px;
+                font-size: 2rem;
 
                 & > * {
                     padding-right: 5px;

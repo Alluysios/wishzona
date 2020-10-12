@@ -102,6 +102,10 @@ a.ml-md {
   font-size: 1.8rem;
 }
 
+.underline {
+  text-decoration: underline !important;
+}
+
 .back-button { 
   display: inline-block;
   font-size: 1.7rem;

@@ -77,12 +77,14 @@
     &__cart-icon {
         transform: translateY(-30px);
         opacity: 0;
+        font-size: 2rem;
         transition: all .3s;
         z-index: 9999;
 
         &::before {
             content: 'add to cart';
             position: absolute;
+            font-size: 1.6rem;
             top: 0;
             opacity: 0;
             left: 0;
@@ -98,14 +100,12 @@
         &::after {
             content: '';
             position: absolute;
-            right: -7px;
+            right: -10px;
             top: -100%;
             border-bottom-left-radius: 30%;
-            border-bottom-right-radius: 30%;
-            padding: 0 6px;
-            padding-bottom: 25px;
+            padding: 0 25px;
+            padding-bottom: 55px;
             width: 100%;
-            height: 100%;
             z-index: -99;
             background: #FFFFFF;
             transition: all .3s;
@@ -118,7 +118,7 @@
     }
 
     &:hover &__cart-icon::after {
-        top: -20px;
+        top: -16px;
     }
 
     &__heart-icon {

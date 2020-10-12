@@ -29,9 +29,20 @@ export default (state = initialState, actions) => {
         const addProduct = [...products, { id: payload.id, name: payload.name, quantity: 1, price: payload.price }]
         return addProduct;
     }
+    
+    const handleDecrement = (products, payload) => {
+        let newProducts;
+        let existingProduct = products.find(product => product.id === payload.id);
+        existingProduct.quantity === 1 ? 
+            // check if quantity of the product is 1 if it does remove it from the array;
+            newProducts = products.filter(product => product.id !== payload.id)
+            :
+            // check if quantity if more than 1 if it does -1 to the quantity
+            newProducts= products.map(product => product.id === payload.id ? { ...product, quantity: product.quantity - 1} : product);
+        return newProducts;
+    }
 
     switch(type) {
-        
         case ADD_CART:
             return {
                 ...state,
@@ -60,7 +71,7 @@ export default (state = initialState, actions) => {
         case DECREMENT_QUANTITY:
             return {
                 ...state,
-                products: [...state.products.map(prod => prod.id === payload.id ? {...prod, quantity: prod.quantity - 1 } : prod )],
+                products: handleDecrement(state.products, payload),
                 subtotal: state.subtotal - payload.price,
                 gst: state.gst - payload.gst,
                 total: state.total  - (payload.gst + payload.price)

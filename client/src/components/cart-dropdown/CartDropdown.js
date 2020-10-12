@@ -23,7 +23,7 @@ const CartDropdown = ({ cart, incrementQuantity, decrementQuantity, removeCart, 
                 { 
                     cart.products.length > 0 ? cart.products.map(product =>
                         product.quantity > 0 ?
-                            <div className="cartdropdown__list-item">
+                            <div className="cartdropdown__list-item" key={product.id}>
                                 <div className="cartdropdown__list-item-name">
                                     {product.name}
                                 </div>
