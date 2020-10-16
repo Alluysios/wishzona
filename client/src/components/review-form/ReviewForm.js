@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import './ReviewForm.scss';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -9,7 +10,7 @@ import FormButton from '../formbutton/FormButton';
 
 import { writeReview } from '../../actions/product.action';
 
-const ReviewForm = ({ writeReview, id }) => {
+const ReviewForm = ({ writeReview, id, auth: { user } }) => {
     const [showForm, setShowForm] = useState(false);
     const [showRating, setShowRating] = useState(true);
 
@@ -32,6 +33,8 @@ const ReviewForm = ({ writeReview, id }) => {
         e.preventDefault();
         writeReview(formData, id)
     }
+
+    if(!user) return <div className="product__reviews-text product__reviews-text--warning"><Link to='/login' className='underline'>Login</Link> to write a review!</div>
 
     return (
         <form className='form--review reviews' onSubmit={handleSubmit}>
@@ -74,9 +77,12 @@ const ReviewForm = ({ writeReview, id }) => {
                 </React.Fragment>
                 : null
             }
-            
         </form>
     )
 }
 
-export default connect(null, { writeReview })(ReviewForm);
+const mapStateToProps = state => ({
+    auth: state.auth
+})
+
+export default connect(mapStateToProps, { writeReview })(ReviewForm);

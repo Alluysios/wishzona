@@ -124,7 +124,7 @@ router.post('/checkout', async(req, res) => {
             source: token.id
         });
 
-        const idempotency_key = uuidv4();
+        const idempotencyKey = uuidv4();
         const charge = await stripe.charges.create({
             amount: price * 100,
             currency: "cad",

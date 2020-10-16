@@ -102,6 +102,10 @@ a.ml-md {
   font-size: 1.8rem;
 }
 
+.underline {
+  text-decoration: underline !important;
+}
+
 .back-button { 
   display: inline-block;
   font-size: 1.7rem;
@@ -109,4 +113,21 @@ a.ml-md {
   color: #333333;
   margin-top: 5rem;
   margin-bottom: 1rem;
+}
+
+.view-btn {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  border: 1px solid #333333;
+  background: #333333;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.view-btn:hover {
+  background: #FFFFFF;
+  color: #333333;
 }

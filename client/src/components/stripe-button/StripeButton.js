@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const StripeCheckOutButton = ({ price }) => {
     const priceForStripe = price * 100;
-    const publishableKey = 'pk_test_51GqOZ0Gxi8h3WIFqOIoNNPPgXOmLCD941IYNfbBV01pqc5OX9Lvrb2bYf2Z0XHJWECJO6bWjzqZrPMDhyeeUnkvE00CJIzzE7X';
+    const publishableKey = 'pk_test_iwR4UDnT2P2aXUaUonJ0WPih';
     const onToken = async (token) => {
         const res = await axios.post('api/v1/products/checkout', {
             token,
@@ -18,16 +18,17 @@ const StripeCheckOutButton = ({ price }) => {
 
     return (
         <StripeCheckout 
+            token={onToken}
+            stripeKey={publishableKey}
             label='Pay Now'
-            name='Arriba Fashion & Beauty'
+            name='Wishzona'
             billingAddress
             shippingAddress
             image='https://eskipaper.com/images/fashion-wallpaper-12.jpg'
             description={`Your total is $${price}`}
             amount={priceForStripe}
             panelLabel='Pay Now'
-            token={onToken}
-            stripeKey={publishableKey}
+            
         />
     )
 }

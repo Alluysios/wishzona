@@ -15,7 +15,7 @@ const ProductItem = ({ product, addCart }) => {
         for (let i = 1; i < rating; i++) {
             stars.push(<FontAwesomeIcon key={i} icon={faStar} size='1x' color='#FF9529' />)
         }
-        if(Number(rating.toString().split('.')[1]) >= 5) stars.push(<FontAwesomeIcon icon={faStarHalfAlt} size='1x' color='#FF9529' />)
+        if(Number(rating.toString().split('.')[1]) >= 5) stars.push(<FontAwesomeIcon key={5} icon={faStarHalfAlt} size='1x' color='#FF9529' />)
         return stars;
     }
     
